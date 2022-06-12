@@ -1,0 +1,10 @@
+.home{
+    padding: 25px;
+    position:relative;
+    background: white;
+    width: 600px;
+    height: 100%;
+    left: 30%;    
+    border-radius: 25px;
+    
+}

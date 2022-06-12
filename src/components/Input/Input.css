@@ -1,0 +1,9 @@
+.input-field{
+    padding: 16px;
+}
+.error-text{
+    text-align: left;
+    margin-left: 100px;
+    padding-top: 5px;
+    color: #ff5349;
+}

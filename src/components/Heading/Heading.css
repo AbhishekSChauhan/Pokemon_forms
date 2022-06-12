@@ -1,0 +1,15 @@
+header{
+    padding: 4%;
+    font-size: 38px;
+    color: #ff5349;
+}
+p{
+    position: relative;
+    font-weight: 700;
+    font-size: 21px;
+    text-align: center;
+    color: gray;
+    width:70%;
+    left:14%;
+    top:-10px
+}

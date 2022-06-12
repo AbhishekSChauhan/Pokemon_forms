@@ -1,0 +1,73 @@
+.pack-heading{
+    position: relative;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.add-button{
+    position: relative;
+    bottom: 25px;
+    left:180px;
+    cursor: pointer;
+    color: #ff5349;
+}
+.no-pack{
+    text-align: left;
+    margin-left: 100px;
+    color: #ff5349;
+}
+.packs{
+    text-align: left;
+    margin-left: 100px;
+}
+
+.total-cost{
+    clear: both;
+    position: relative;
+    margin-top: 80px;
+    text-align: left;
+    margin-left: 100px;
+    font-size: larger;
+    font-weight: 700;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.total{
+    position: absolute;
+    right: 100px;
+    color: black;
+}
+
+.journey-button{
+    margin-bottom: 20px;
+}
+.submit-error{
+    text-align: left;
+    margin-left: 100px;
+    font-weight: 800;
+    font-size:x-large;
+    padding-bottom: 10px;
+    color: #ff5349;
+}
+
+.chip-items{
+    float: left;
+    list-style-type: none;
+    border: 2px solid;
+    width: 150px;
+    padding: 6px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.cancel-btn{
+    position: relative;
+    left:16px;
+    cursor: pointer;
+}
