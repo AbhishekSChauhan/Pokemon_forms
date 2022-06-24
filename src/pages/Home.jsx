@@ -3,7 +3,6 @@ import Form from '../components/Form/Form'
 import Heading from '../components/Heading/Heading'
 import Pack from '../components/Pack/Pack'
 import Region from '../components/Region/Region'
-import './Home.css'
 
 const Home = () => {
   const [name, setName] = useState('')
@@ -13,7 +12,7 @@ const Home = () => {
   const [poke, setPoke] = useState('')
 
   return (
-    <div className='home'>
+    <div className='bg-gray-400 flex flex-col p-1 mx-auto'>
         <Heading />
         <Form 
           name={name} setName={setName} 

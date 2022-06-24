@@ -7,15 +7,19 @@ import Select from '@mui/material/Select';
 const Selection = ({value,setValue,options,defaultValue}) => {
     return (
         <div>
-           <div>      
-                <FormControl variant="filled" sx={{ m: 3, minWidth: 400}}>
+            <div className='w-full p-4'>    
+                <FormControl variant="filled" sx={{ width: '100%' }}>
                     <InputLabel>{defaultValue}</InputLabel>
                     <Select
                         value={value}
-                        onChange={(e)=>setValue(e.target.value)}                       
+                        onChange={(e)=>setValue(e.target.value)}
+                                             
                     >
                         {options.map(option=>(
-                            <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
+                            <MenuItem key={option.value} value={option.value}
+                            >
+                                {option.label}
+                            </MenuItem>
                         ))}
                     </Select>
                 </FormControl>
