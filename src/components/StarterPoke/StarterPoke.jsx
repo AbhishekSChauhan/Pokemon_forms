@@ -59,7 +59,7 @@ const StarterPoke = ({ region, poke, setPoke }) => {
 
       <div className="flex items-center pt-3 ">
       {region === "Kanto" && (
-        <div className="flex flex-row mx-auto space-x-2 sm:space-x-7 sm:p-4 md:space-x-7 md:p-4">
+        <div className="flex flex-row mx-auto space-x-2 sm:space-x-7 sm:p-4 md:space-x-8 md:p-6">
           {Kanto.map((e) => (
             <img
               src={e.img}
@@ -68,9 +68,9 @@ const StarterPoke = ({ region, poke, setPoke }) => {
               onClick={() => handleSelect(e.name)}
               className={
                 e.name === selected ? 
-                "h-24 w-24 p-2 bg-gray-50 border-2 rounded-full border-[#ff5349] cursor-pointer" 
+                "h-24 w-24 sm:h-32 sm:w-32 p-2 bg-gray-50 border-2 rounded-full border-[#ff5349] cursor-pointer" 
                 : 
-                "h-24 w-24 p-2 bg-gray-50 border-2 rounded-full cursor-pointer hover:border-[#ff5349]"
+                "h-24 w-24 sm:h-32 sm:w-32 p-2 bg-gray-50 border-2 rounded-full cursor-pointer hover:border-[#ff5349]"
               }
             />
           ))}
@@ -78,7 +78,7 @@ const StarterPoke = ({ region, poke, setPoke }) => {
       )}
 
       {region === "Jhoto" && (
-        <div className="flex flex-row mx-auto space-x-2 sm:space-x-7 sm:p-4 md:space-x-7 md:p-6">
+        <div className="flex flex-row mx-auto space-x-2 sm:space-x-7 sm:p-4 md:space-x-8 md:p-6">
           {Jhoto.map((e) => (
             <img
               src={e.img}
@@ -87,8 +87,8 @@ const StarterPoke = ({ region, poke, setPoke }) => {
               onClick={() => handleSelect(e.name)}
               className={
                 e.name === selected ? 
-                "h-24 w-24 p-2 bg-gray-50 border-2 rounded-full border-[#ff5349]" 
-                : "h-24 w-24 p-2 bg-gray-50 border-2 rounded-full cursor-pointer hover:border-[#ff5349]"
+                "h-24 w-24 sm:h-32 sm:w-32 p-2 bg-gray-50 border-2 rounded-full border-[#ff5349]" 
+                : "h-24 w-24 sm:h-32 sm:w-32 p-2 bg-gray-50 border-2 rounded-full cursor-pointer hover:border-[#ff5349]"
               }
             />
           ))}
@@ -96,7 +96,7 @@ const StarterPoke = ({ region, poke, setPoke }) => {
       )}
 
       {region === "Hoenn" && (
-        <div className="flex flex-row mx-auto space-x-2 sm:space-x-7 sm:p-4 md:space-x-7 md:p-6">
+        <div className="flex flex-row mx-auto space-x-2 sm:space-x-7 sm:p-4 md:space-x-8 md:p-6">
           {Hoenn.map((e) => (
             <img
               src={e.img}
@@ -105,8 +105,8 @@ const StarterPoke = ({ region, poke, setPoke }) => {
               onClick={() => handleSelect(e.name)}
               className={
                 e.name === selected ? 
-                "h-24 w-24 p-2 bg-gray-50 border-2 rounded-full border-[#ff5349]" 
-                : "h-24 w-24 p-2 bg-gray-50 border-2 rounded-full cursor-pointer hover:border-[#ff5349]"
+                "h-24 w-24 sm:h-32 sm:w-32 p-2 bg-gray-50 border-2 rounded-full border-[#ff5349]" 
+                : "h-24 w-24 sm:h-32 sm:w-32 p-2 bg-gray-50 border-2 rounded-full cursor-pointer hover:border-[#ff5349]"
               }
             />
           ))}

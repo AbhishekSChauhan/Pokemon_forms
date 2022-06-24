@@ -137,11 +137,12 @@ const AddItemsModal = ({
 
         <div className="flex flex-col text-center p-2">
           <button
+              disabled={isDisabled}
               type="submit"
               variant="contained"
               // style={{ backgroundColor: "#ff5349" }}
               onClick={() => addToCart()}
-              className="pl-4 bg-[#ff5349] hover:bg-[#ff5359] text-white font-bold py-2 px-4 rounded"
+              className={isDisabled?'bpl-4 bg-[#ff5349] text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed':"pl-4 bg-[#ff5349] text-white font-bold py-2 px-4 rounded"}
             >
               ADD TO CART
           </button>
