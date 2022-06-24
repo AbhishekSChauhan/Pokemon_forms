@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import Button from "@mui/material/Button";
-import "./Modal.css";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Selection from "../Select/Select";
@@ -9,19 +8,6 @@ import Switch from "@mui/material/Switch";
 import Slide from "../Slider/Slider";
 import uuid from "react-uuid";
 
-const style = {
-  position: "relative",
-  padding: "10px",
-  top: "50%",
-  left: "51%",
-  transform: "translate(-50%, -50%)",
-  width: "588px",
-  bgcolor: "background.paper",
-  borderRadius: "20px",
-  boxShadow: 24,
-  p: 4,
-  textAlign: "center"
-};
 
 const options = [
   {
@@ -115,11 +101,15 @@ const AddItemsModal = ({
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}>
-        <h2 className="heading">{"Place Your Order"}</h2>
+      <Box className='bg-gray-100 mt-36 sm:mt-32 p-4 mx-auto flex flex-col text-center 
+        overflow-hidden max-w-sm sm:max-w-md md:max-w-lg rounded-lg border-0'>
+       
+        <div className="flex flex-col text-center">
+          <h2 className="p-4 text-3xl font-bold underline">{"Place Your Order"}</h2>
+          <p className="p-4 font-semibold mx-auto">We'll use this info to pack your order! Muhahahahahaha</p>
+        </div>
 
-        <p>We'll use this info to pack your order! Muhahahahahaha</p>
-        <Selection
+         <Selection
           options={options}
           value={item}
           setValue={setItem}
@@ -127,32 +117,38 @@ const AddItemsModal = ({
         />
 
         <Slide value={quantity} setValue={setQuantity} min={1} max={10} />
-        <div className="quantity">Select Quantity</div>
+        <div className="flex flex-col text-center -mt-7">Select Quantity</div>
 
-        <p className="bag">
+        <p className="p-4 text-left relative">
           I need a bag for that!
           <Switch
-            className="switch"
             style={{ color: "#ff5349" }}
             color="warning"
             checked={toggle}
             onClick={() => setToggle(!toggle)}
+            className='absolute left-28 sm:left-44 md:left-60'
           />
         </p>
 
-        <div className="cost">
+        <div className="p-4 font-bold text-left relative">
           Cost
-          <span className="cartTotal">${cartTotal}</span>
+          <span className="absolute right-7 sm:right-7 font-semibold">${cartTotal}</span>
         </div>
 
-        <Button
-          disabled={isDisabled}
-          variant="contained"
-          onClick={() => addToCart()}
-          style={{ backgroundColor: "#ff5349" }}
-        >
-          {"ADD TO CART"}
-        </Button>
+        <div className="flex flex-col text-center p-2">
+          <button
+              disabled={isDisabled}
+              type="submit"
+              variant="contained"
+              // style={{ backgroundColor: "#ff5349" }}
+              onClick={() => addToCart()}
+              className={isDisabled?'bpl-4 bg-[#ff5349] text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed':"pl-4 bg-[#ff5349] text-white font-bold py-2 px-4 rounded"}
+            >
+              ADD TO CART
+          </button>
+        </div>
+
+        
       </Box>
     </Modal>
   );

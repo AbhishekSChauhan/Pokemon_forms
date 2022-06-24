@@ -4,7 +4,7 @@ import Input from '../Input/Input'
 const Form = ({name,setName,codeName,setCodeName,handleSubmit}) => {
 
     return (
-        <form >
+        <div className='flex flex-col text-center'>
             <Input type='text' 
                 value={name} 
                 onChange={(e)=>setName(e.target.value)}
@@ -19,7 +19,7 @@ const Form = ({name,setName,codeName,setCodeName,handleSubmit}) => {
                 placeholder='Code Name' 
                 errorText={"We know that's not yo code name!!"}
             />
-        </form>
+        </div>
     )
 }
 
