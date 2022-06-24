@@ -102,7 +102,7 @@ const EditItemsModal = ({
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box className='bg-gray-100 mt-36 sm:mt-32 p-4 mx-auto flex flex-col text-center 
+      <Box className='bg-gray-100 mt-20 sm:mt-32 p-4 mx-auto flex flex-col text-center 
         overflow-hidden max-w-sm sm:max-w-md md:max-w-lg rounded-lg border-0'>
        
         <div className="flex flex-col text-center">
