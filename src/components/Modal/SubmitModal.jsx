@@ -35,7 +35,8 @@ const SubmitModal = ({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className='bg-gray-100 mt-36 sm:mt-32 p-4 mx-auto flex flex-col text-center 
+          overflow-hidden max-w-sm sm:max-w-md md:max-w-lg rounded-lg border-0'>
           <div className="submit-modal">
             <div>Name: {name}</div>
             <div>Code Name: {codeName}</div>
@@ -52,9 +53,18 @@ const SubmitModal = ({
             </div>
             <div>Total cost: ${total}</div>
 
-            <Button variant="contained" onClick={handleClose}>
-              CLOSE
-            </Button>
+            <div className="flex flex-col text-center p-4">
+              <button
+                  type="submit"
+                  variant="contained"
+                  // style={{ backgroundColor: "#ff5349" }}
+                  onClick={handleClose}
+                  className="pl-4 bg-[#ff5349] hover:bg-[#ff5359] text-white font-bold py-2 px-4 rounded"
+                >
+                  CLOSE
+              </button>
+            </div>
+            
           </div>
         </Box>
       </Modal>

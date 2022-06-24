@@ -1,18 +1,17 @@
 import React from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
-import "./Pack.css";
 
 const Chip = ({ packItems, removeChip, setOpenModal, updateChip }) => {
   return (
     <div>
       {packItems.length === 0 ? (
-        <div className="no-pack">No packs selected</div>
+        <div className="p-4 text-[#ff5349]">No packs selected</div>
       ) : (
-        <div className="packs">
+        <div className="p-4 grid grid-cols-2 gap-4 ">
           {packItems.map((pack) => (
             <div
               key={pack.id}
-              className="chip-items"
+              className="px-4 py-2.5 mx-auto list-none rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center items-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease"
               style={{
                 backgroundColor:
                   pack.toggle === true ? "lightblue" : "lightgray"
@@ -25,7 +24,7 @@ const Chip = ({ packItems, removeChip, setOpenModal, updateChip }) => {
               <CancelIcon
                 fontSize="small"
                 onClick={() => removeChip(pack.id)}
-                className="cancel-btn"
+                
               />
             </div>
           ))}

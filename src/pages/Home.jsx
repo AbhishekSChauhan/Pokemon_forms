@@ -12,7 +12,7 @@ const Home = () => {
   const [poke, setPoke] = useState('')
 
   return (
-    <div className='bg-gray-400 flex flex-col p-1 mx-auto'>
+    <div className='flex flex-col p-1 mx-auto'>
         <Heading />
         <Form 
           name={name} setName={setName} 

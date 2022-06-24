@@ -4,7 +4,7 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import AddItemsModal from "../Modal/AddItemsModal";
 import SubmitModal from "../Modal/SubmitModal";
 import Chip from "./Chip";
-import "./Pack.css";
+// import "./Pack.css";
 import EditItemsModal from "../Modal/EditItemsModal";
 
 const Pack = ({ name, codeName, region, distance, poke }) => {
@@ -52,7 +52,7 @@ const Pack = ({ name, codeName, region, distance, poke }) => {
     ) {
       setSubmitError("Enter correct name and code name");
     } else if (distance <= 1) {
-      setSubmitError("Select corrent pokemon center");
+      setSubmitError("Select current pokemon center");
     } else if (region === "" || poke === "") {
       setSubmitError("Select a region and a pokemon");
     } else if (packItems.length < 1) {
@@ -64,11 +64,11 @@ const Pack = ({ name, codeName, region, distance, poke }) => {
   };
 
   return (
-    <>
-      <div className="pack-heading">What do you want to pack?</div>
+    <div className="relative">
+      <div className="flex text-left pl-4 sm:pl-4 pt-4">What do you want to pack?</div>
 
       <AddCircleIcon
-        className="add-button"
+        className="absolute right-3 sm:right-6 bottom-56 top-2 "
         fontSize="large"
         onClick={() => setOpenModal(true)}
       />
@@ -97,22 +97,25 @@ const Pack = ({ name, codeName, region, distance, poke }) => {
         updateChip={updateChip}
       />
 
-      <div className="total-cost">
+      <div className="p-4 font-bold relative">
         Total Cost
-        <span className="total">${total}</span>
+        <span className="absolute right-5 sm:right-9 font-semibold">${total}</span>
       </div>
 
-      <div className="submit-error">{submitError}</div>
+      <div className={submitError?"p-4 font-bold":''}>{submitError}</div>
 
-      <Button
-        type="submit"
-        variant="contained"
-        style={{ backgroundColor: "#ff5349" }}
-        onClick={handleModalSubmit}
-        className="journey-button"
-      >
-        START MY JOURNEY
-      </Button>
+      <div className="flex flex-col text-center p-2">
+        <button
+            type="submit"
+            variant="contained"
+            // style={{ backgroundColor: "#ff5349" }}
+            onClick={handleModalSubmit}
+            className="pl-4 bg-[#ff5349] hover:bg-[#ff5359] text-white font-bold py-2 px-4 rounded"
+          >
+            START MY JOURNEY
+        </button>
+      </div>
+        
 
       <SubmitModal
         openSubmitModal={openSubmitModal}
@@ -125,7 +128,7 @@ const Pack = ({ name, codeName, region, distance, poke }) => {
         poke={poke}
         total={total}
       />
-    </>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import './Slider.css'
 const Slide = ({value,setValue,min,max}) => {
 
   return (
-    <div className='pt-4 pl-4 pr-4' >
+    <div className='p-5' >
       <Slider
         size="small"
         aria-label="Default"

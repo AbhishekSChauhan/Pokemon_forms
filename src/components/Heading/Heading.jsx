@@ -4,10 +4,10 @@ import React from 'react'
 const Heading = () => {
   return (
     <div className='flex flex-col text-center'>
-        <header className='text-3xl font-bold underline'>
+        <header className='p-4 text-3xl font-bold underline'>
             Fill This Form
         </header>        
-        <p className='font-semibold mx-auto' >
+        <p className='p-4 font-semibold mx-auto' >
             We'll use this info to dominate the poke world! Muhahahahah
         </p>
     </div>

@@ -35,7 +35,7 @@ const Region = ({
     <div className="flex flex-col text-center w-full mx-auto ">
       <Slide value={distance} setValue={setDistance} min={1} max={100} />
       
-      <div className="-pt-1 text-sm sm:text-base">How far is your nearest pokemon center?(in KMs)</div>
+      <div className="p-2 text-sm sm:text-base">How far is your nearest pokemon center?(in KMs)</div>
 
       <Selection
         options={options}
