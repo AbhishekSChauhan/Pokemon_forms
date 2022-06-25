@@ -100,9 +100,10 @@ const EditItemsModal = ({
       onClose={handleClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      className='p-4 sm:p-0 sm:mr-4'
     >
-      <Box className='bg-gray-100 mt-20 sm:mt-32 p-4 mx-auto flex flex-col text-center 
-        overflow-hidden max-w-sm sm:max-w-md md:max-w-lg rounded-lg border-0'>
+      <Box className='bg-gray-100 mt-16 sm:mt-32 p-4 md:p-10 mx-auto flex flex-col text-center 
+        overflow-hidden max-w-sm sm:max-w-lg md:max-w-xl rounded-lg border-0'>
        
         <div className="flex flex-col text-center">
           <h2 className="p-4 text-3xl font-bold underline">{"Update Your Order"}</h2>
@@ -126,13 +127,13 @@ const EditItemsModal = ({
             color="warning"
             checked={toggle}
             onClick={() => setToggle(!toggle)}
-            className='absolute left-28 sm:left-44 md:left-60'
+            className='absolute left-24 sm:left-60 md:left-64'
           />
         </p>
 
         <div className="p-4 font-bold text-left relative">
           Cost
-          <span className="absolute right-7 sm:right-7 font-semibold">${cartTotal}</span>
+          <span className="absolute right-6 sm:right-7 font-semibold">${cartTotal}</span>
         </div>
 
         <div className="flex flex-col text-center p-2">
