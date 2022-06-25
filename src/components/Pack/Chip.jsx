@@ -7,7 +7,7 @@ const Chip = ({ packItems, removeChip, setOpenModal, updateChip }) => {
       {packItems.length === 0 ? (
         <div className="p-4 text-[#ff5349]">No packs selected</div>
       ) : (
-        <div className="p-4 grid grid-cols-2 gap-4 ">
+        <div className="p-4 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-3 ">
           {packItems.map((pack) => (
             <div
               key={pack.id}

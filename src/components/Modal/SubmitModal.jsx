@@ -20,8 +20,9 @@ const SubmitModal = ({
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        className='p-4 sm:p-0 sm:mr-4'
       >
-        <Box className='bg-gray-100 mt-20 sm:mt-32 p-4 mx-auto flex flex-col text-center 
+        <Box className='bg-gray-100 mt-28 sm:mt-32 p-4 mx-auto flex flex-col text-center 
           overflow-hidden max-w-sm sm:max-w-md md:max-w-lg rounded-lg border-0'>
           <div className="p-4 font-semibold">
             <div>Name: {name}</div>
