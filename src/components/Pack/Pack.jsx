@@ -67,7 +67,7 @@ const Pack = ({ name, codeName, region, distance, poke }) => {
       <div className="flex text-left pl-4 sm:pl-4 pt-4">What do you want to pack?</div>
 
       <AddCircleIcon
-        className="absolute right-3 sm:right-6 bottom-56 top-2 "
+        className="absolute right-3 sm:right-4 bottom-56 top-2 "
         fontSize="large"
         onClick={() => setOpenModal(true)}
       />
@@ -98,10 +98,10 @@ const Pack = ({ name, codeName, region, distance, poke }) => {
 
       <div className="p-4 font-bold relative">
         Total Cost
-        <span className="absolute right-5 sm:right-9 font-semibold">${total}</span>
+        <span className="absolute right-5 sm:right-6 font-semibold">${total}</span>
       </div>
 
-      <div className={submitError?"p-4 font-bold":''}>{submitError}</div>
+      <div className={submitError?"p-4 font-bold text-[#ff5349]":''}>{submitError}</div>
 
       <div className="flex flex-col text-center p-2">
         <button

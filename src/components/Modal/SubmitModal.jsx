@@ -22,8 +22,8 @@ const SubmitModal = ({
         aria-describedby="modal-modal-description"
         className='p-4 sm:p-0 sm:mr-4'
       >
-        <Box className='bg-gray-100 mt-28 sm:mt-32 p-4 mx-auto flex flex-col text-center 
-          overflow-hidden max-w-sm sm:max-w-md md:max-w-lg rounded-lg border-0'>
+        <Box className='bg-gray-100 mt-24 sm:mt-28 p-4 md:p-10 mx-auto flex flex-col text-center 
+        overflow-hidden max-w-sm sm:max-w-lg md:max-w-xl rounded-lg border-0'>
           <div className="p-4 font-semibold">
             <div>Name: {name}</div>
             <div>Code Name: {codeName}</div>

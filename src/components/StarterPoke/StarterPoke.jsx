@@ -54,7 +54,7 @@ const StarterPoke = ({ region, poke, setPoke }) => {
   return (
     <div className="p-2">
       <div>
-        Choose your starter pokemon
+        {region ? 'Choose your starter pokemon':''}
       </div> 
 
       <div className="flex items-center pt-3 ">
